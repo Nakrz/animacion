@@ -1,0 +1,210 @@
+body{
+    background-color: green;
+}
+
+
+
+
+#anim{
+    background-color: green;
+}
+
+.mensaje1, .mensaje2, .mensaje3, .mensaje4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 150px;
+    opacity: 0;
+    animation-duration: 1s; 
+}
+
+.mensaje1 {
+    animation-name: mostrar-mensaje1;
+    animation-delay: 0s;
+}
+
+.mensaje2 {
+    animation-name: mostrar-mensaje2;
+    animation-delay: 1s; 
+}
+
+.mensaje3 {
+    animation-name: mostrar-mensaje3;
+    animation-delay: 2s; 
+}
+
+.mensaje4 {
+    animation-name: mostrar-mensaje4;
+    animation-delay: 3s; 
+}
+
+@keyframes mostrar-mensaje1 {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+@keyframes mostrar-mensaje2 {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+@keyframes mostrar-mensaje3 {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+@keyframes mostrar-mensaje4 {
+    0% { opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.nube {
+    position: absolute;
+    bottom: 87%;
+    width: 350px;
+    height: 150px;
+    right: 0px;
+    opacity: 100%;
+    animation: nube 14s linear 1 normal, desaparecer 1s linear 11s forwards;
+    z-index: 2;
+}
+
+@keyframes nube {
+    0% {
+        opacity: 100%;
+        right: 0;
+    }
+    50% {
+        opacity: 100%;
+        right: calc(50% - 125px); 
+    }
+    51%{
+        opacity: 100%;
+        right: calc(50% - 125px); 
+    }
+    52%{
+        opacity: 100%;
+        right: calc(50% - 125px); 
+    }
+    75%{
+        opacity: 100%;
+        right: calc(70% - 125px); 
+    }
+    100%{
+        opacity: 100%;
+        right: calc(90% - 125px); 
+    }
+    
+}
+
+@keyframes desaparecer {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
+
+.sol{
+    position: absolute;
+    right: 50px;
+    bottom: 75%;
+    width:250px;
+    height:230px;
+    
+    opacity: 5;
+    animation-duration: 17s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+    animation-name: sol;
+    z-index: 1;
+}
+@keyframes sol{
+    0%{
+        opacity: 10%;
+        
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+
+    }
+    
+    
+}
+
+
+.lluvia {
+    position: absolute;
+    width: 150px; 
+    height: 150px; 
+    top: -240px;
+    left: 850px;
+    animation: caida 4s linear forwards, desaparecer-gota 5s linear 3s forwards;
+    animation-delay: 6s; 
+    
+}
+
+
+@keyframes caida {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(1200px);
+    }
+}
+
+@keyframes desaparecer-gota {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    75%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+
+.flor {
+    position: absolute;
+    left: 47%;
+    width: 220px;
+    height: 250px;
+    bottom: -340px; 
+    animation-name: flor-animacion;
+    animation-duration: 5s;
+    animation-delay: 13s; 
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards
+}
+
+@keyframes flor-animacion {
+    0% {
+        bottom: -140px;
+        
+    }
+    0.5%{
+        bottom: -120px;
+    }
+    100% {
+        bottom: 1px;
+        
+    }
+}
